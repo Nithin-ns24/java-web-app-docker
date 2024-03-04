@@ -4,6 +4,10 @@ metadata:
   name: javawebapp-ENVIRONMENT-BUILD_NUMBER
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: javawebapp
+      version: "BUILD_NUMBER"
   template:
     metadata:
       labels:
@@ -16,3 +20,4 @@ spec:
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8090
+
