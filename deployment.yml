@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: javawebapp-env-build-number
+  namespace: java-app
+  name: javawebapp-env
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: javawebapp
-      version: "BUILD_NUMBER"
   template:
     metadata:
       labels:
         app: javawebapp
-        version: "BUILD_NUMBER"
     spec:
       containers:
-      - name: javawebapp-env-build-number
+      - name: javawebapp-env
         image: nithin246/javawebapp:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8090
+
 
