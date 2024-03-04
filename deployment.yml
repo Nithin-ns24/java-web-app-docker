@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: javawebapp-ENVIRONMENT-BUILD_NUMBER
-        image: IMAGE
+        image: nithin246/javawebapp:v1
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8090
