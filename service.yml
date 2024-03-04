@@ -15,4 +15,4 @@ spec:
       protocol: "TCP"
   selector:
     app: javawebapp
-    version: "BUILD_NUMBER"
+    version: "build-number"
